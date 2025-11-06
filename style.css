@@ -1,0 +1,140 @@
+/* ---------- Base Setup ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+/* ---------- Header ---------- */
+#header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 30px;
+}
+
+#header h1 {
+  font-size: 2.4em;
+  letter-spacing: 4px; /* Name ke letters ke beech gap */
+  font-weight: 600;
+  padding: 40px;
+}
+
+#header hr {
+  width: 100%; 
+  border: 1px solid #d4d1d1;
+  margin-top: 8px;
+}
+
+/* ---------- Main Layout ---------- */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  border-left: none;
+  border-right: none;
+  position: relative;
+}
+
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 35%;
+  width: 1px;
+  background-color: #aaa; 
+}
+
+/* ---------- Left Side ---------- */
+#mainLeft {
+  width: 35%;
+  padding-right: 30px;
+  word-wrap: break-word;
+}
+
+#mainLeft section {
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+#mainLeft h2 {
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  border: none; 
+}
+
+#mainLeft p {
+  font-size: 0.95em;
+  margin: 6px 0;
+}
+
+#mainLeft a {
+  color: #001fcc;
+  text-decoration: underline;
+}
+
+
+
+
+/* ---------- Right Side ---------- */
+#mainRight {
+  width: 65%;
+  padding-left: 30px;
+  word-wrap: break-word;
+}
+
+#mainRight section {
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+#mainRight h2 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  border: none; 
+}
+
+#mainRight p {
+  font-size: 0.95em;
+  
+  margin-bottom: 8px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 850px) {
+  body {
+    padding: 20px;
+  }
+
+  #header h1 {
+    font-size: 2em;
+    letter-spacing: 3px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  main::before {
+    display: none; /
+  }
+
+  #mainLeft,
+  #mainRight {
+    width: 100%;
+    padding: 0;
+  }
+}
